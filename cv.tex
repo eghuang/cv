@@ -1,0 +1,192 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, letterpaper]{article}
+\usepackage{fontspec}
+\usepackage{listings}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}	
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setmonofont[Scale=1]{Inconsolata}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+\lstset{basicstyle=\ttfamily,breaklines=true}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Edward Greg Huang - vita},
+	pdfauthor={Edward Greg huang},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Edward Greg Huang}\\[1cm]
+Office of the Secretary and Chief of Staff to the Regents \\
+1111 Franklin St.,12th floor \\
+Oakland, CA 94607 \\
+% Department of Mathematics \\
+% University of California at Berkeley \\
+% Berkeley, CA 94704, USA\\[.2cm]
+
+510.987.9220\\
+\href{mailto:eghuang@berkeley.edu}{\lstinline{eghuang@berkeley.edu}}\\
+\href{https://www.eghuang.com}{eghuang.com}\\
+\href{https://github.com/\\eghuang}{GitHub}\\
+\href{https://scholar.google.com/citations?user=DlUurWMAAAAJ}{Google Scholar}\\
+%\vfill
+
+%Born:  March 12, 1879---Ulm, Germany \\
+Nationality: American
+
+%%\hrule
+\section*{Current position}
+\emph{Undergraduate Student}, Department of Mathematics, University of California, Berkeley
+
+%%\hrule
+\section*{Areas of Interest}
+ Theoretical computer science • Algorithmic information theory • Biophysics 
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2019}\textsc{B.A} in Mathematics, University of California, Berkeley\\
+\years{2016}Study abroad, University of Hong Kong\\
+
+
+%%\hrule
+\section*{Academic Positions}
+\noindent
+\years{2018 - present}Student Advisor to the Board of Regents, \textit{University of California} \\
+\years{2018}REU Research Fellow, \textit{Santa Fe Institute} \\
+\years{2017 - present}Biophysics research assistant, \textit{NASA \& Sachs Lab at UC Berkeley}\\
+\years{2015 - present}Evolutionary ecology research assistant, \textit{EvoLab at UC Berkeley}\\
+
+%%\hrule
+\section*{Nonacademic Experience}
+\noindent
+\years{2018 - present}Maintenance Manager, \textit{Berkeley Student Cooperative} \\
+\years{2017 - present}Brand Ambassador, \textit{Klättermusen} \\
+\years{2017 - 2018}Vice President, \textit{Cal Hiking and Outdoor Society}\\
+\years{2016}Analyst Intern, \textit{EQS Group}\\
+\years{2015 - 2016}Architectural Intern, \textit{Project M+}\\
+
+\section*{Publications}
+
+\subsection*{Journal articles}
+\noindent
+\years{2018}\textbf{Huang EG}, Wolpert DH. (2018) Algorithmic information and inference devices. \emph{\href{https://github.com/eghuang/inferenceDevices/blob/master/inference_devices.pdf}{Manuscript in preparation.}} \\
+
+\years{2018}\textbf{Huang EG}, Lin Y, Ebert M, Ham DW, \& Sachs RK. (2018) Synergy theory for mouse Harderian gland radiation tumorigenesis induced by mixed beams whose individual components are nuclei in the galactic cosmic ray spectrum. \emph{Manuscript under review.} \href{https://github.com/sachsURAP/NASAmouseHG}{Code}\\
+
+\years{2018}Krehenwinkel H, Fong M, Kennedy S, \textbf{Huang EG}, Suzuki N, Cayetano L, \& Gillespie RG. (2018) The effect of DNA degradation bias in passive sampling devices on metabarcoding studies of arthropod communities and their associated microbiota. \emph{PLOS ONE 13(1): e0189188}. \\
+\href{https://doi.org/10.1371/journal.pone.0189188}{https://doi.org/10.1371/journal.pone.0189188} \\
+
+\subsection*{Talks $\&$ Presentations}
+* indicates presenter\\
+
+\noindent
+\years{2018}\textbf{Huang EG}$^{*}$. (2018) Connections between Turing machines and a formalization of knowledge. Talk given at: \emph{Santa Fe Institute REU Final Talks}; Aug 9; Santa Fe, NM, USA. \href{https://www.youtube.com/watch?v=10bi_R47uYw&list=PLZlVBTf7N6GpTwEeQOlOmIfYN5J7zciZR&index=6&t=0s}{Video}\\
+
+\years{2018}Ham DW,  Gao J, Song BL, Yu J, Zhao LY, \textbf{Huang EG}$^{*}$, Lin Y, \& Sachs RK. (2018) Synergy theory in biology: Simulating radiation damage during interplanetary voyages as an example. Poster session presented at: \emph{11th Annual Biology and Mathematics in the Bay Area Conference; Nov 18}; San Francisco, CA, USA. \href{https://github.com/sachsURAP/BaMBA_11/blob/master/Bamba17v3.pdf}{Poster}\\
+
+\subsection*{Authored software}
+\noindent
+\years{2017}\textbf{Huang EG}, Rominger AJ. (2017) \lstinline{kokua}: An \lstinline{R}-package of tools and data for Hawaiian ecology. \emph{\href{https://github.com/hawaiiDimensions/kokua}{GitHub}}\\
+
+\years{2016}Rominger AJ, \textbf{Huang EG}. (2017) \lstinline{hdimDB}: Tools for biocollections database management in \lstinline{R}. \emph{\href{https://github.com/hawaiiDimensions/db/tree/master/hdimDB}{GitHub}}\\
+
+\subsection*{Book Chapters}
+\noindent
+\years{2015}Adhikari A, Ghosh DJ, \textbf{Huang EG}, et al. (2015) Theory Meets Data: A Data Scientist’s Handbook to Statistics. \emph{UC Berkeley Dept. of Statistics}. {\href{https://github.com/eghuang/stat_94}{Manuscript}}\\
+
+%\hrule
+\section*{Selected Programming Projects}
+\noindent
+\years{2018}\lstinline{abyss}: rogue-like platform video game, Java\\
+\years{2018}\lstinline{BearMaps}: web mapping service for the city of Berkeley, Java\\
+\years{2018}\lstinline{deque}: data structure implementation, Java\\
+\years{2017}\lstinline{simpleNeuralNet}: general feedforward neural network, Python\\
+\years{2017}\lstinline{multiAgentSearch}: implementation of search algorithms, Python\\
+\years{2017}\lstinline{hdimGeo}: interactive map of biocollections data from the NSF Hawaii Dimensions project, R \\
+\years{2016}\lstinline{yelpMaps}: interactive map of Yelp data in Bay Area, Python\\
+\years{2016}\lstinline{schemeInterpreter}: direct executor for Scheme programs, Python\\
+
+
+%\hrule
+\section*{Grants, honors \& awards}
+\noindent
+\years{2018}REU Research Fellowship, National Science Foundation Grant No. 1757923 - \$7,000\\
+\years{2017}Dean’s List, UC Berkeley\\
+\years{2016}ASUC Student Opportunity Fund Grant, UC Berkeley - \$1,000\\
+\years{2016}ASUC Academic Opportunity Fund Grant, UC Berkeley - \$250\\
+
+%\hrule
+%\section*{Service to the profession}
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+%\fontspec{Times New Roman}
+\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{http://github.com/eghuang/cv/cv.pdf}{Vitae on GitHub}}
+\end{center}
+
+\end{document}
