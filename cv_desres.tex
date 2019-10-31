@@ -1,0 +1,314 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, letterpaper]{article}
+\usepackage{fontspec}
+%\usepackage{fontawesome}
+\usepackage{listings}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{letterpaper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}	
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+\setmonofont[Scale=1]{Inconsolata}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+ Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+ BoldFont=LinLibertine_RB.otf,
+ ItalicFont=LinLibertine_RI.otf,
+ BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Centaur MT Std}
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Jenson Pro}
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Minion Pro}
+% ---- CUSTOM AMPERSAND
+%\newcommand{\amper{}}{\chardef\amper="E0BD }
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Centaur MT Std}\selectfont\itshape\&}}
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Jenson Pro}\selectfont\itshape\&}}
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Minion Pro}\selectfont\itshape\&}}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+\lstset{basicstyle=\ttfamily,breaklines=true}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Edward Greg Huang - vita},
+	pdfauthor={Edward Greg huang},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} % default colors at http://www.maths.adelaide.edu.au/anthony.roberts/LaTeX/ltxusecol.php
+
+% DOCUMENT
+\begin{document}
+{\LARGE Edward Greg Huang}\\[1cm]
+Los Angeles, CA 90032
+
+% Department of Mathematics \\
+% University of California at Berkeley \\
+% Berkeley, CA 94704, USA \\[.2cm]
+
+\href{mailto:eghuang@berkeley.edu}{\lstinline{eghuang@berkeley.edu}}\\
+\href{https://www.eghuang.com}{www.eghuang.com}\\
+\href{https://github.com/eghuang}{GitHub: eghuang}\\
+\href{https://scholar.google.com/citations?user=DlUurWMAAAAJ}{Google Scholar}\\
+%\vfill
+
+%Born:  March 12, 1879---Ulm, Germany \\
+Nationality: American
+
+%%\hrule
+\section*{Current position}
+\emph{Research assistant}, Department of Mathematics, University of California at Berkeley
+% \null \quad Advisor: Rainer K. Sachs
+
+%%\hrule
+\section*{Areas of interest}
+Algorithmic information theory • Biophysics • Deep learning  
+
+%\hrule
+\section*{Education}
+\noindent
+
+\years{2019}\textsc{B.A.} Applied Mathematics, University of California, Berkeley\\
+%\years{2019}\textsc{B.A.} Applied Mathematics, University of California at Berkeley \\
+% \null \quad \textit{Concentration in Computer Science} \\
+\years{2016}Study abroad, University of Hong Kong
+%\years{2015}John Marshall High School, Los Angeles
+
+%%\hrule
+\section*{Academic positions}
+\noindent
+\years{2018 - 2019}Student Advisor to the Regents, \textit{University of California} \\
+\years{2018}Artificial intelligence research assistant, \textit{Intelligent Robotics Group, NASA Ames} \\
+\years{2018}REU research fellow, \textit{Santa Fe Institute} \\
+\null \quad \textit{Advisor}: David H. Wolpert \\
+\years{2017 - present}Biophysics research assistant, \textit{Department of Mathematics, UC Berkeley} \\ %\textit{Lawrence Berkeley National Laboratory}\\ 
+\null \quad \textit{Primary Investigator}: Rainer K. Sachs \\
+\years{2015 - 2017}Evolutionary ecology research assistant, \textit{Department of Environmental Science, UC Berkeley}\\
+\null \quad \textit{Primary Investigators}: Rosemary G. Gillespie and George Roderick
+
+%%\hrule
+\section*{Industry $\&$ nonprofit experience}
+\noindent
+\years{2018}Senior unit-level manager, \textit{Berkeley Student Cooperative} \\
+\years{2017 - present}Brand ambassador, \textit{Klättermusen AB} \\
+%Acting president
+\years{2016 - 2018}Vice President, \textit{Cal Hiking and Outdoor Society}\\
+\years{2016}Financial analyst intern, \textit{EQS Group AG}\\
+\years{2015 - 2016}Architectural intern, \textit{Project M+}\\
+
+\section*{Publications}
+
+\subsection*{In preparation}
+\noindent
+
+\years{2020} Hada M, Wang SC, Zhao LY, \textbf{Huang EG}, Sachs RK. (2020) Synergy theory for chromosome aberrations after exposure to mixed fields. \emph{Manuscript in preparation}.\\
+
+\years{2019} Chang PY, \textbf{Huang EG}, Lin Y, Ham DW, Sachs RK,  Hada M, Blakely EA. (2019) Murine tumors after exposures to mixtures simulating galactic cosmic rays: three recent experiments and their synergy theory interpretations. \emph{Manuscript in preparation}.\\
+
+\years{2019}\textbf{Huang EG}. (2019) Algorithmic information and inference devices. \emph{Manuscript in preparation}. \href{https://nbviewer.jupyter.org/github/eghuang/inferenceDevices/blob/master/inference_devices.pdf}{PDF}
+
+\subsection*{Peer-reviewed journal articles}
+
+\years{2019}\textbf{Huang EG}, Lin Y, Ebert M, Ham DW, Zhang CY, \& Sachs RK. (2019) Synergy theory for murine Harderian gland tumours after irradiation by mixtures of high-energy ionized atomic nuclei. \emph{Radiation and Environmental Biophysics}. 58(2): 151-166. \href{https://doi.org/10.1007/s00411-018-00774-x}{https://doi.org/10.1007/s00411-018-00774-x}\\
+
+\years{2018}Krehenwinkel H, Fong M, Kennedy S, \textbf{Huang EG}, Suzuki N, Cayetano L, \& Gillespie RG. (2018) The effect of DNA degradation bias in passive sampling devices on metabarcoding studies of arthropod communities and their associated microbiota. \emph{PLoS ONE 13(1): e0189188}. \\ \href{https://doi.org/10.1371/journal.pone.0189188}{https://doi.org/10.1371/journal.pone.0189188}\\
+
+\subsection*{Invited talks $\&$ presentations} * indicates presenter\\
+\noindent
+
+\years{2019}Blakely EA*, Bakke J, Grover A, Rosen C, Bjornstad KA, Mao JH, \textbf{Huang EG}, Ham DW, Sachs RK, $\&$ Chang PY. Murine Harderian gland tumorigenesis induced by dual, rapid-sequence particle beams. Talk to be given at the \emph{International Congress of Radiation Research}; Aug 25 -29; Manchester, UK.\\
+
+\years{2019}\textbf{Huang EG}$^{*}$, Ham DW, Lin Y, Wang S, Zhao L, Zhang Y, Blakely EA, Chang PY $\&$ Sachs RK. (2019) Synergy theory: murine Harderian gland tumors and \textit{in vitro} chromosome aberrations induced by exposure to mixed beams with some high-LET components. Talk given at: \emph{2019 NASA Human Research Program Investigators' Workshop}; Jan 22 - 25; Galveston, Texas, USA. \href{https://nbviewer.jupyter.org/github/sachsURAP/NASA_HRP_2019/blob/master/hrp_abstract.pdf}{Abstract [PDF]} $ \& $ \href{https://nbviewer.jupyter.org/github/sachsURAP/NASA_HRP_2019/blob/master/hrp_slides.pdf}{Slides [PDF]}\\
+
+\years{2018}\textbf{Huang EG}$^{*}$ $ \& $ Wolpert DH. (2018) Connections between Turing machines and a formalization of knowledge. Talk given at: \emph{Santa Fe Institute REU Final Talks}; Aug 9; Santa Fe, New Mexico, USA. \href{https://www.youtube.com/watch?v=10bi_R47uYw&list=PLZlVBTf7N6GpTwEeQOlOmIfYN5J7zciZR&index=6&t=0s}{Video}\\
+
+\years{2017}Ham DW, Gao J, Song BL, Yu J, Zhao LY, \textbf{Huang EG}$^{*}$, Lin Y, \& Sachs RK. (2017) Synergy theory in biology: Simulating radiation damage during interplanetary voyages as an example. Poster session presented at: \emph{11th Annual Biology and Mathematics in the Bay Area Conference; Nov 18}; San Francisco, California, USA. \href{https://nbviewer.jupyter.org/github/sachsURAP/BaMBA_11/blob/master/Bamba17v3.pdf}{PDF}\\
+
+\years{2016}\textbf{Huang EG}$^* $ $ \& $ Rominger AJ. (2016) Managing large datasets from ecological fieldwork. Talk presented at the \emph{Department of Environmental Science, Policy, and Management at UC Berkeley; May 6}; Berkeley, California, USA.
+
+\newpage
+\subsection*{Book chapters}
+\noindent
+
+\years{2015}Adhikari A, Ghosh DJ, \textbf{Huang EG}, et al. (2015) Theory Meets Data: A Data Scientist’s Handbook to Statistics. \emph{UC Berkeley Dept. of Statistics}. {\href{https://nbviewer.jupyter.org/github/eghuang/theory_meets_data/blob/master/theory-meets-data.pdf}{PDF}}\\
+
+\subsection*{Authored software}
+\noindent
+
+\years{2019}\textbf{Huang EG}, Ham DW, Lin Y, Wang S, Ebert M, Zhang CY, \& Sachs RK. (2019) \lstinline{synergy}: A \lstinline{R}-package of tools and data to model mixed radiation fields for radiobiologists. \emph{In preparation for CRAN}. \emph{\href{https://github.com/sachsURAP/NASAmouseHG}{GitHub}}\\
+
+\years{2017}\textbf{Huang EG}, Rominger AJ. (2017) \lstinline{kokua}: \lstinline{R}-package of tools and data for Hawaiian ecology. \emph{\href{https://github.com/hawaiiDimensions/kokua}{GitHub}}\\
+
+\years{2016}Rominger AJ, \textbf{Huang EG}. (2017) \lstinline{hdimDB}: Tools for biocollections database management in \lstinline{R}. \emph{\href{https://github.com/hawaiiDimensions/db/tree/master/hdimDB}{GitHub}}\\
+
+
+%\hrule
+\section*{Selected programming projects}
+\noindent
+\years{2019}\lstinline{synergy}: Package of novel prediction methods for space radiation induced cancer risk in \lstinline{R} for CRAN. \\
+\years{2019}\lstinline{guavabots}: Dynamic graph search algorithms based on incomplete and unreliable data in Python. \\
+\years{2019}\lstinline{numAnalysis}: Algorithms for numerical approximation methods in MATLAB. \\
+\years{2018}\lstinline{deepFlood}: Deep learning framework written for NASA to track floods using satellite imagery.\\
+\years{2018}\lstinline{abyss}: Rogue-like platform video game in Java.\\
+\years{2018}\lstinline{BearMaps}: Web mapping service for the city of Berkeley in Java.\\
+\years{2018}\lstinline{deque}: Data structure implementation in Java.\\
+\years{2017}\lstinline{simpleNeuralNet}: General feedforward neural network API in Python.\\
+\years{2017}\lstinline{multiAgentSearch}: Implementation of search algorithms in Python.\\
+\years{2017}\lstinline{housingEstimate}: Machine learning model for predicting housing prices in scipy. \\
+\years{2017}\lstinline{hdimGeo}: Interactive map of biocollections data from the NSF Hawaii Dimensions project in \lstinline{R}. \\
+\years{2017}\lstinline{kokua}: Open-source \lstinline{R}-package of tools and data for Hawaiian ecology.\\
+\years{2017}\lstinline{hdimShiny}: Web application for ecological data wrangling.\\
+\years{2016}\lstinline{hdimDB}: Open-source package of tools for biocollections database management in \lstinline{R}.\\
+\years{2016}\lstinline{schemeInterpreter}: Direct executor for Scheme programs in Python.\\
+\years{2016}\lstinline{ants}: Object-oriented tower defense game in Python.\\
+\years{2016}\lstinline{yelpMaps}: Interactive map of Yelp data in Bay Area in Python.\\
+\years{2016}\lstinline{hog}: Turn based dice rolling game with an AI opponent in Python.\\
+
+
+\newpage
+%\hrule
+\section*{Grants, honors \& awards}
+\noindent
+\years{2019}Nominee, Kenneth Priestley Award\\
+\years{2019}Nominee, Outstanding Student Leadership Award, UC Berkeley\\
+\years{2018}REU Research Fellowship, National Science Foundation Grant No. 1757923\\ % \$7,000\\
+\years{2017}Dean’s List, UC Berkeley\\
+\years{2016}Freeman Foundation Scholarship\\ % \$2,500\\
+\years{2016}ASUC Student Opportunity Fund Grant, UC Berkeley\\ % \$1,000\\
+\years{2016}ASUC Academic Opportunity Fund Grant, UC Berkeley\\ % \$250\\
+
+
+%%\hrule
+\section*{Skills}
+\textsc{Programming:} Python, R, Java, SQL, MATLAB, Scheme (Lisp), Bash. \\
+
+\textsc{Libraries, APIs, and Technologies:} TensorFlow, Keras, Spark, Jupyter, scipy, numpy, pandas, matplotlib, Seaborn, stats, devtools, ggplot2, shiny, plyr, testthat, Git, \LaTeX, Markdown, AutoCAD. \\
+
+\textsc{Languages:} English (native), Cantonese (native), Mandarin (basic), Spanish (basic). 
+
+%\hrule
+\section*{Memberships \& affiliations}
+%\years{2018 - 2019}
+Regents of the University of California \begin{itemize}
+ \item[] Public Engagement and Development Committee \\ 
+ Finance and Capital Strategies Committee \\ 
+ Investments Committee
+ \end{itemize}
+ 
+%\years(2016 - 2019}
+Berkeley Student Cooperative
+
+%\years{2016 - }
+Cal Hiking and Outdoor Society (CHAOS, formerly the UC Hiking Club) \\
+%\begin{itemize}
+% \item[] Acting President \\ 
+% Vice President \\ 
+% Treasurer
+% \end{itemize}
+%\years{2016}
+Cal Entomology Club 
+
+%\years{2015 - 2016}
+Cal Boxing
+
+%\hrule
+\section*{Miscellaneous}
+Erdős number: 4
+
+%\hrules
+%\section*{Selected press}
+%NASA, Johnson Space Center, January 2019 
+%\years{2019}Current research citations: "Synergy theory for murine Harderian gland tumours after irradiation by mixtures of high-energy ionized atomic nuclei". \emph{\href{https://three.jsc.nasa.gov}{THREE}}. Johnson Space Center, NASA \\ % https://three.jsc.nasa.gov/bibliography/ Tissue biology and pathology -> models
+
+%San Francisco Chronicle, December 2018
+%\years{2018}"Student leaders say they'll fight UC Regents". \href{https://www.sfchronicle.com/bayarea/article/Student-leaders-say-they-ll-fight-UC-regents-13496536.php}{San Francisco Chronicle}. 28 Dec 2018. \\
+
+% https://dailybruin.com/2019/01/08/uc-board-of-regents-considers-eliminating-student-adviser-position/
+
+%Daily Bruin
+%\years{2018}"Undergrad student from UC Berkeley to serve as UC Regents’ next student advisor". \href{https://dailybruin.com/2018/07/23/undergrad-student-from-uc-berkeley-to-serve-as-uc-regents-next-student-advisor/}{Daily Bruin} 23 Jul 2018. \\
+
+%Daily Californian
+%\years{2018}"UC Berkeley student Edward Huang selected as student advisor to UC regents, plans to bring STEM perspective". \href{http://www.dailycal.org/2018/07/09/uc-berkeley-student-edward-huang-selected-student-advisor-uc-regents-plans-bring-stem-perspective/}{Daily Californian}. 9 Jul 2018. \\
+
+%\years{2018}"UC Regents recap – Nov. 14". \href{https://dailybruin.com/2018/11/16/uc-regents-recap-nov-14/}{Daily Bruin} 16 Nov 2018. \\
+
+%\years{2018}"UCLA experts speculate on fiscal feasibility of Newsom’s campaign pledges" \href{https://dailybruin.com/2018/11/28/ucla-experts-speculate-on-fiscal-feasibility-of-newsoms-campaign-pledges/}{Daily Bruin}. 28 Nov 2018. \\
+
+% http://www.dailycal.org/2018/12/23/uc-board-of-regents-to-consider-terminating-student-advisor-position/
+
+% http://ucsdguardian.org/2018/12/24/uc-board-regents-leadership-recommends-eliminating-student-advisor-position/
+
+% http://dailynexus.com/2018-12-26/uc-regents-to-consider-removing-student-advisor-position-leaving-undergraduates-without-representation/
+
+
+
+
+%\hrule
+%\section*{Professional activities & service}
+
+%\hrule
+%\section*{Certifications}
+
+%\hrule
+%\section*{Languages and skills}
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  \textsc{Last updated}: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+%\fontspec{Times New Roman}
+\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{https://github.com/eghuang/cv/blob/master/cv.pdf}{Vitae on GitHub}}
+\end{center}
+
+\end{document}
